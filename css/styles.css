@@ -1,0 +1,20 @@
+body {
+    background-image: url("../images/unsplash_city_lighter.jpg");
+    background-color: #cccccc;
+    background-size: cover;
+}
+
+#headline{
+  margin-left: 60px;
+  margin-top: 40px;
+}
+
+#mug{
+  float: right;
+  margin: 30px;
+}
+
+p {
+  margin-left: 50px;
+  margin-top: 10px;
+}
