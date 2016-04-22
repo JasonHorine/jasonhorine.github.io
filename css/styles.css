@@ -1,7 +1,6 @@
 body {
     background-image: url("../images/unsplash_city_lighter.jpg");
-    background-color: #cccccc;
-    background-size: cover;
+    background-size: 100% 100%;
 }
 
 #headline{
@@ -17,4 +16,20 @@ body {
 p {
   margin-left: 50px;
   margin-top: 10px;
+}
+
+#container{
+  overflow:hidden;
+  height: 100vh;
+  width: 100vw;
+}
+
+#left_margin{
+  float:left;
+  height:100vh;
+  width:100vw;
+  shape-outside: polygon(0% 0%, 50% 0%, 41% 17%, 35% 31%, 10% 31%, 10% 48%, 23% 48%, 40% 63%, 26% 100%, 0% 100%);
+  shape-margin: 20px;
+  border-color: black;
+  border-width: 10px;
 }
