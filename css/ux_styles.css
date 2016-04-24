@@ -1,0 +1,39 @@
+body {
+  font-family: 'Oxygen', Arial, sans-serif;
+
+  padding: 20px;
+}
+.project_box {
+  border-radius: 50px;
+  padding: 15px;
+  overflow: auto;
+}
+.project_box_l{
+  background-color: honeydew;
+}
+.project_box_r{
+  background-color: gray;
+}
+.project_text_box{
+  display: inline-block;
+  background-color: black;
+  color: white;
+  border-radius: 20px;
+  padding: 20px;
+  min-width: 280px;
+  max-width: 400px;
+  width: 30%;
+}
+.project_text{
+}
+.project_visual {
+  display: inline-block;
+  border-style: outset;
+  border-color: gray;
+  border-width: thin;
+  padding: 20px;
+  min-width: 280px;
+  max-width: 650px;
+  width: 60%;
+}
+.big_quote{}
