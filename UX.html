@@ -1,43 +1,108 @@
-<!doctype html>
-
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-  <meta charset="utf-8">
+  <!-- reset -->
+  <link  href="css/reset.css" rel="stylesheet">
 
+  <!-- Required by Flexslider -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js:"></script>
+
+  <!-- (Flexslider) Place somewhere in the <head> of your document -->
+  <link rel="stylesheet" href="css/flexslider.css" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+  <!-- <script src="jquery.flexslider.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.6.0/jquery.flexslider-min.js"></script>
+  <script type="text/javascript" charset="utf-8">
+    $(window).load(function() {
+      $('.flexslider').flexslider({
+        slideshow: false,  // no automatic sliding
+        animation: "slide",
+        controlsContainer: ".flex-container"
+      })
+    });
+
+    // these are the options, with defaults for Flexslider:
+    // slideDirection: "horizontal",   //String: Select the sliding direction, "horizontal" or "vertical"
+    // slideshow: true,                //Boolean: Animate slider automatically
+    // slideshowSpeed: 7000,           //Integer: Set the speed of the slideshow cycling, in milliseconds
+    // animationDuration: 600,         //Integer: Set the speed of animations, in milliseconds
+    // directionNav: true,             //Boolean: Create navigation for previous/next navigation? (true/false)
+    // controlNav: true,               //Boolean: Create navigation for paging control of each clide? Note: Leave true for manualControls usage
+    // keyboardNav: true,              //Boolean: Allow slider navigating via keyboard left/right keys
+    // mousewheel: false,              //Boolean: Allow slider navigating via mousewheel
+    // prevText: "Previous",           //String: Set the text for the "previous" directionNav item
+    // nextText: "Next",               //String: Set the text for the "next" directionNav item
+    // pausePlay: false,               //Boolean: Create pause/play dynamic element
+    // pauseText: 'Pause',             //String: Set the text for the "pause" pausePlay item
+    // playText: 'Play',               //String: Set the text for the "play" pausePlay item
+    // randomize: false,               //Boolean: Randomize slide order
+    // slideToStart: 0,                //Integer: The slide that the slider should start on. Array notation (0 = first slide)
+    // animationLoop: true,            //Boolean: Should the animation loop? If false, directionNav will received "disable" classes at either end
+    // pauseOnAction: true,            //Boolean: Pause the slideshow when interacting with control elements, highly recommended.
+    // pauseOnHover: false,            //Boolean: Pause the slideshow when hovering over slider, then resume when no longer hovering
+    // controlsContainer: "",          //Selector: Declare which container the navigation elements should be appended too. Default container is the flexSlider element. Example use would be ".flexslider-container", "#container", etc. If the given element is not found, the default action will be taken.
+    // manualControls: "",             //Selector: Declare custom control navigation. Example would be ".flex-control-nav li" or "#tabs-nav li img", etc. The number of elements in your controlNav should match the number of slides/tabs.
+    // start: function(){},            //Callback: function(slider) - Fires when the slider loads the first slide
+    // before: function(){},           //Callback: function(slider) - Fires asynchronously with each slider animation
+    // after: function(){},            //Callback: function(slider) - Fires after each slider animation completes
+    // end: function(){}               //Callback: function(slider) - Fires when the slider reaches the last slide (asynchronous)
+
+  </script>
+  <!-- (Flexslider end) -->
+
+  <link  href="css/styles.css" rel="stylesheet">
   <title>Jason Horine</title>
-  <meta name="description" content="The HTML5 Herald">
-  <meta name="author" content="SitePoint">
-
-  <!-- <link rel="stylesheet" href="css/styles.css?v=1.0"> -->
-  <link rel="stylesheet" href="css/ux_styles.css">
-  <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
-  <!--[if lt IE 9]>
-  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-  <![endif]-->
 </head>
-
 <body>
-  <!-- <script src="js/scripts.js"></script> -->
   <header>
   </header>
-  <p class="big_quote">The psychology behind a great user interface is what I love most about UX design… not <strong>what</strong> the user is thinking, buy <strong>why</strong> they are thinking it, <i>why</i> they are in front of your product in the first place.</p>
-
-  <div class="project_box project_box_l">
-    <script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js" async></script>
-    <div class="project_visual wistia_embed wistia_async_d07q0m66d2 seo=false" style="height:332px;width:500px">&nbsp;
-    </div>
-    <div class="project_text_box">
-        <p class="project_text">This brief video gives an overview of my most recent project. This is a wireframe of a completely re-imagined front end for a Programmable Logic Controller's (PLC) System Configuration. This project is still underway, so there is no final image to show. The video presentation explains the process for designing this particular interface.</p>
-    </div>
+  <div id="top_quote">
+    <p class="big_quote">The psychology behind a great user interface is what I love most about UX design, not what the user is thinking, buy why they are thinking it, why they are in front of your product in the first place.</p>
   </div>
-  <div class="project_box project_box_r">
-    <img class="project_visual" src="./images/P3Find.png"/>
-    <div class="project_text_box">
-      <p class="project_text">This is the search results display in a PLC. A project in this programming software has many layers, so displaying results is much more complex than on a flat document such as a word processor or other text editor. I used a familiar tree structure to categorize the search results. The user can quickly and intuitively find the search results in context. They can also easily hide large sets of results to focus the scope.</p>
+    <div class="flex-container"> <!-- container for overflow -->
+      <div class="flexslider">
+        <ul class="slides">
+          <li>
+            <img class="project_visual" src="./images/P3Find.png" img="image of search results in a programmable logic controller IDE"/>
+            <div class="project_text_box">
+              <p class="project_text">This is the search results display in a PLC. A project in this programming software has many layers, so displaying results is much more complex than on a flat document such as a word processor or other text editor. I used a familiar tree structure to categorize the search results. The user can quickly and intuitively find the search results in context. They can also easily hide large sets of results to focus the scope.</p>
+            </div>
+          </li>
+          <li>
+            <img class="project_visual" src="./images/P3PID.png" alt="image of a PID (proportional integral derivative) control setup dialog"/>
+            <div class="project_text_box">
+              <p class="project_text">This is the interface for setting up a PID instruction in a PLC. This is a very complicated instruction with many of the available functionality being optinoal. To keep it as simple as possible, the options were grouped and divided among multiple tabs.</p>
+              <p class="project_text">Only the options on the first tab are required for most applications. Options get progressively less common going deeper in the tabs.
+            </div>
+          </li>
+          <li>
+            <img class="project_visual" src="./images/AnInFirstPass.jpg" alt="the original configuration dialog"/>
+            <div class="project_text_box">
+              <p class="project_text">BEFORE:  This is the first draft I received from the vendor  of a configuration screen for an analog input module for a PLC. They asked for our assistance.  The following slide shows my suggested layout.</p>
+            </div>
+          </li>
+          <li>
+            <img class="project_visual" src="./images/AnInBalsamiq.png" alt="a sketch done in Balsamiq wire framing software"/>
+            <div class="project_text_box">
+              <p class="project_text">AFTER:  On my wireframe, the required selections are all visible. Optional selections are hidden until enabled to avoid confusion. The UI displays all the pertinent information to show how the selected options will affect the system. Otherwise, some users would have to reach for a calculator to be sure what to expect.</p>
+              <p class="project_text">In the Scaling area, go-together fields are close together. Visual cues indicate the workflow, left to right. It ends with a display of the data formatting that will result from the user's selections.</p>
+            </div>
+          </li>
+          <li>
+            <script charset="ISO-8859-1" src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
+            <div class="project_visual wistia_embed wistia_async_d07q0m66d2 seo=false">
+            </div>
+            <div class="project_text_box">
+                <p class="project_text">This brief video gives an overview of my most recent project. This is a wireframe of a completely re-imagined front end for a Programmable Logic Controller's (PLC) System Configuration. This project is still underway, so there is no final image to show. The video offers an overview of my process for designing this particular interface.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
   <nav>
   </nav>
-  <p class="big_quote">Done right, the interface feels to the user like an extension of their thoughts, using it is just a natural progression towards the goal at hand. When the user interface can fade into the user’s subconcsious mind, it is spot on.</p>
+  <!-- <div id="bottom_quote">
+    <p class="big_quote">Done right, the interface feels to the user like an extension of their thoughts, using it is just a natural progression towards the goal at hand. When the user interface can fade into the user's subconcsious mind, it is spot on.</p>
+  </div> -->
 </body>
 </html>

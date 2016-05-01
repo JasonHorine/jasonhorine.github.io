@@ -6,7 +6,7 @@ agold: #FFCB05
 agreen: #7B8738
 */
 .orange{
-  background-color: #BF5700;
+  background-color: #191970;
   color: white;
 }
 .gold{
@@ -14,25 +14,22 @@ agreen: #7B8738
 }
 .blue{
   background-color: #005DAA;
-  color: white;
+  color: #FFCB05;
 }
 .green{
   background-color: #7B8738;
   color: white;
 }
-.black{
-  background-color: #FFFFFF;
-  color: white;
-}
+
 html {
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 body {
   font-family: 'Oxygen', Arial, sans-serif;
   /*font-size: 120%;*/
   padding: 4px;
-  background-color: black;
+  background-color: white;
 }
 h1 {
   font-size: 250%;
@@ -48,13 +45,9 @@ h3 {
 }
 p {
   font-size: 100%;
-  line-height: 140%;
+  line-height: 120%;
   letter-spacing: 1px;
-  padding-top: 10px;
-}
-a {
-  color: inherit;
-  text-decoration: inherit;
+  padding-top: 6px;
 }
 .center {
   margin: 0 auto;
@@ -101,22 +94,32 @@ a {
   margin-right: 0.25em;
   vertical-align: -0.4em;
 }
-.blocks_container{
+.hero{
+  width: 96%;
+  background-color: pink;
+}
+.hero__content{
+  width: 90%;
+  margin: 40px auto;
+}
+.cards {
+  background-color: yellow;
+}
+.cards__deck {
+  width: 90%;
+  margin: 50px auto;
+  display: -webkit-flex;
   display: flex;
-  width: 100%;
-  align-items: stretch;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-wrap: nowrap;
   flex-wrap: wrap;
+  height: 250px;
+  background-color: gray;
 }
-.double_div{
-  width: 66.66%;
-  display: inline-block;
-  padding: 30px;
-  box-sizing: border-box;
-}
-.section__square{
-  width: 33.33%;
-  display: inline-block;
-  padding: 30px;
+.cards__card{
+  width: 300px;
+  padding: 20px;
   box-sizing: border-box;
 }
 @media screen and (max-width: 700px) {
