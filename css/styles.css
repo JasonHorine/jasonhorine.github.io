@@ -4,25 +4,30 @@ ukblue: #005DAA
 midnight: #191970;
 agold: #FFCB05
 agreen: #7B8738
+texas red: #F51E1E;
 */
 .orange{
   background-color: #BF5700;
+  color: white;
+}
+.red{
+  background-color: #F51E1E;
   color: white;
 }
 .gold{
   background-color: #FFCB05;
 }
 .blue{
-  background-color: #005DAA;
+  background-color: navy;
   color: white;
 }
 .green{
   background-color: #7B8738;
   color: white;
 }
-.black{
+.white{
   background-color: #FFFFFF;
-  color: white;
+  color: navy;
 }
 html {
   max-width: 1000px;
@@ -107,11 +112,27 @@ a {
   align-items: stretch;
   flex-wrap: wrap;
 }
+.double_div, .section__square{
+  border: 2px;
+  border-style: outset;
+  border-color: gray;
+  border-radius:  10px;
+}
+
 .double_div{
   width: 66.66%;
   display: inline-block;
   padding: 30px;
   box-sizing: border-box;
+}
+.float_right{
+  height: 142px;
+  float: right;
+  background: #fffcf6;
+  border-radius: 36px;
+  border-width: 1px;
+  border-color: #aaaaaa;
+  border-style: outset;
 }
 .section__square{
   width: 33.33%;
@@ -119,17 +140,16 @@ a {
   padding: 30px;
   box-sizing: border-box;
 }
-@media screen and (max-width: 700px) {
+@media only screen and (max-width: 700px) {
     .double_div {
       width: 100%;
     }
     .section__square{
       width: 50%;
-      size
-      : 339px;
+      /*size: 339px;*/
     }
 }
-@media screen and (max-width: 500px) {
+@media only screen and (max-width: 569px) {
     .section__square{
       width: 100%;
     }
