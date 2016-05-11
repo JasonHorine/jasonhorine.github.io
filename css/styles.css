@@ -18,9 +18,9 @@ Tx red: #F51E1E
 .gold{
   background-color: #FFCB05;
 }
-/*.gold:hover{
+.gold:hover{
   background-color: #EFBB00;
-}*/
+}
 .blue{
   background-color: navy;
   color: white;
@@ -156,7 +156,7 @@ a {
   box-sizing: border-box;
 }
 .float_left{
-  height: 60px;
+  height: 50px;
   float: left;
   margin-right: 10px;
 }
