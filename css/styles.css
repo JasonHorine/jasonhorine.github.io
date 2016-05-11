@@ -37,22 +37,22 @@ body {
   font-family: 'Oxygen', Arial, sans-serif;
   /*font-size: 120%;*/
   padding: 4px;
-  background-color: black;
+  background-color: white;
 }
 h1 {
-  font-size: 250%;
+  font-size: 290%;
   line-height: 120%;
 }
 h2 {
-  font-size: 200%;
+  font-size: 240%;
   line-height: 120%;
 }
 h3 {
-  font-size: 130%;
+  font-size: 160%;
   line-height: 120%;
 }
-p {
-  font-size: 100%;
+p, ul {
+  font-size: 120%;
   line-height: 140%;
   letter-spacing: 1px;
   padding-top: 10px;
@@ -140,7 +140,15 @@ a {
   padding: 30px;
   box-sizing: border-box;
 }
-@media only screen and (max-width: 700px) {
+.float_left{
+  height: 60px;
+  float: left;
+}
+#psi_image{
+  margin-top: 15px;
+  margin-right: 15px;
+}
+@media only screen and (max-width: 800px) {
     .double_div {
       width: 100%;
     }
@@ -154,3 +162,10 @@ a {
       width: 100%;
     }
 }
+.link_resume:hover{
+  background-image: url("../images/ResumeThumb.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+}
+
