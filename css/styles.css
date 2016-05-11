@@ -160,6 +160,9 @@ a {
   float: left;
   margin-right: 10px;
 }
+.clear_left{
+  clear: left;
+}
 #psi_image{
   margin-top: 15px;
 }
