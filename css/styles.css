@@ -14,20 +14,36 @@ texas red: #F51E1E;
   background-color: #F51E1E;
   color: white;
 }
+/*.red:hover{
+  background-color: #E50E0E;
+}*/
 .gold{
   background-color: #FFCB05;
 }
+/*.gold:hover{
+  background-color: #EFBB00;
+}*/
 .blue{
   background-color: navy;
   color: white;
 }
+/*.blue:hover{
+  background-color: #000060;
+}*/
 .green{
   background-color: #7B8738;
+  color: white;
+}
+.green:hover{
+  background-color: #6B7728;
   color: white;
 }
 .white{
   background-color: #FFFFFF;
   color: navy;
+}
+.white:hover{
+  background-color: #EFEFEF;
 }
 html {
   max-width: 1000px;
@@ -37,7 +53,7 @@ body {
   font-family: 'Oxygen', Arial, sans-serif;
   /*font-size: 120%;*/
   padding: 4px;
-  background-color: white;
+  background-color: #dddddd;
 }
 h1 {
   font-size: 290%;
@@ -113,10 +129,10 @@ a {
   flex-wrap: wrap;
 }
 .double_div, .section__square{
-  border: 2px;
+  /*border: 2px;
   border-style: outset;
   border-color: gray;
-  border-radius:  10px;
+  border-radius:  10px;*/
 }
 
 .double_div{
@@ -162,10 +178,5 @@ a {
       width: 100%;
     }
 }
-.link_resume:hover{
-  background-image: url("../images/ResumeThumb.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: block;
-}
+
 
