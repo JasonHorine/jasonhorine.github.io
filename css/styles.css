@@ -127,13 +127,6 @@ a {
   align-items: stretch;
   flex-wrap: wrap;
 }
-.double_div, .section__square{
-  /*border: 2px;
-  border-style: outset;
-  border-color: gray;
-  border-radius:  10px;*/
-}
-
 .double_div{
   width: 66.66%;
   display: inline-block;
