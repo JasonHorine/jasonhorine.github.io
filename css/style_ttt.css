@@ -1,0 +1,137 @@
+.overall-area {
+  height: 480px;
+  width: 290px;
+  margin: 20px auto;
+
+}
+
+header {
+  width: 290px;
+  padding-top: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.p1-score, .game-options, .p2-score, .btn-div, .game-cell{
+  text-align: center;
+}
+
+.btn {
+  background-color: rgb(238, 238, 238);
+}
+
+.game-board{
+    width: 289px;
+    height: 289px;
+    border: outset 2px blue;
+    font-size: 0px;
+    background-color: blue;
+}
+
+.game-cell {
+  display: inline-block;
+  width: 92px;
+  height: 92px;
+  border: inset 2px blue;
+  background-color: lightgrey;
+  margin: 0px;
+}
+
+.game-cell p {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-size: 80px;
+  -webkit-margin-before: 0px;
+  -webkit-margin-after: 0px;
+  line-height: 123px; /*edited this line after the course*/
+  /*  added the following two lines after the course*/
+  position: relative;
+  top: -18px;
+}
+
+footer {
+  width: 290px;
+  padding-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.turnPointer {
+  display: inline-flex;
+  position: relative;
+  color: LightGray;
+  background: Navy;
+  padding: 15px;
+}
+
+#player1Pointer{
+  display: inline-flex;
+  padding: 0px;
+  width: 0px;
+  height: 0px;
+  border-top: 25px solid transparent;
+  border-right: 50px solid navy;
+  border-bottom: 25px solid transparent;
+  border-left: 0px solid transparent;
+  background: transparent;
+}
+
+#player2Pointer{
+  display: inline-flex;
+  padding: 0px;
+  width: 0px;
+  height: 0px;
+  border-top: 25px solid transparent;
+  border-right: 0px solid transparent;
+  border-bottom: 25px solid transparent;
+  border-left: 50px solid navy;
+  background: transparent;
+}
+/*.turnPointer:before {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  right: 100%;
+  top: 50%;
+  margin-top: -25px;
+  width: 0;
+  height: 0;
+  border-top: 25px solid transparent;
+  border-right: 50px solid navy;
+  border-bottom: 25px solid transparent;
+  border-left: 10px solid transparent;
+}
+
+.turnPointer:after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  margin-top: -25px;
+  width: 0;
+  height: 0;
+  border-top: 25px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 25px solid transparent;
+  border-left: 50px solid navy;
+}*/
+
+/*.avatar {
+  width: 72px;
+  height: 72px;
+  display: inline-block;
+}
+*/
+/*#turnPointer {
+  width: 100px;
+  height: 72px;
+  display: inline-block;
+}
+
+footer {
+  height: 110px;
+}*/
+/*body{
+  display: none;
+}
+*/

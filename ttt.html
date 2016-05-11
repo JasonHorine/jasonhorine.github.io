@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
+    <!-- Latest compiled and minified CSS -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" type="text/css" href="css/style_ttt.css">
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script src="js/script.js"></script>
+
+  </head>
+
+  <body>
+
+    <title>
+      Tic Tac Toe!
+    </title>
+      <div class="overall-area">
+        <header>
+
+            <div class="p1-score">
+              <p>Player 1</p>
+              <p id="p1Score" >X</p>
+            </div>
+            <div class="btn-div" >
+              <button id="resetBtn" type="button" class="btn btn-default" aria-label="Right Align">
+                <!-- <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span> -->
+                <!-- <i class="fa fa-bars"></i> -->
+                <!-- &#9776 -->
+                Reset
+              </button>
+              <!-- <p>Play to: 3</p> -->
+            </div>
+            <div class="p2-score">
+              <p>Player 2</p>
+              <p id="p2Score" >O</p>
+            </div>
+
+        </header>
+        <div>
+          <div class="game-board">
+            <div>
+              <div id="cell0" class="game-cell">
+                <p></p>
+              </div>
+              <div id="cell1" class="game-cell">
+                <p></p>
+              </div>
+              <div id="cell2" class="game-cell">
+                <p></p>
+              </div>
+              <div id="cell3" class="game-cell">
+                <p></p>
+              </div>
+              <div id="cell4" class="game-cell">
+                <p></p>
+              </div>
+              <div id="cell5" class="game-cell">
+                <p></p>
+              </div>
+              <div id="cell6" class="game-cell">
+                <p></p>
+              </div>
+              <div id="cell7" class="game-cell">
+                <p></p>
+              </div>
+              <div id="cell8" class="game-cell">
+                <p></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer>
+          <div id="player1Pointer" class="turnPointer"></div>
+          <div class="turnPointer">Your Turn!</div>
+          <div id="player2Pointer" class="turnPointer"></div>
+        </footer>
+      </div>
+      <p style="padding:0px 10px;" >This is from a JavaScript homework assignment just two weeks into General Assembly's Web Immersive program.  My personal goal was to build a game that would run very well on a tired old iPhone 3 we have sitting around the house.</p>
+      <p style="padding:0px 10px;" >Except for three lines of CSS and adding these comments, the code is as I wrote it then.  I had plans for more functionality at the time, which you can see in the code.  Getting stuck on a CSS issue prevented me from completing it before our class jumped into Ruby.  Some features:</p>
+      <p style="padding:0px 10px;" >-Players take turns starting the game.</p>
+      <p style="padding:0px 10px;" >-Once complete, clicking the board anywhere clears it.</p>
+      <p style="padding:0px 10px;" >-The 'Your Turn!' arrow intuitively facilitates two players sitting side by side.</p>
+  </body>
+
+</html>

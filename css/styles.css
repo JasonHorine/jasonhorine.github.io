@@ -25,9 +25,9 @@ Tx red: #F51E1E
   background-color: navy;
   color: white;
 }
-/*.blue:hover{
+.blue:hover{
   background-color: #000060;
-}*/
+}
 .green{
   background-color: #7B8738;
   color: white;
@@ -75,6 +75,12 @@ a {
   color: inherit;
   text-decoration: inherit;
 }
+.a_link{
+  text-decoration: underline;
+}
+.a_link:hover{
+  color: #999999;
+}
 .center {
   margin: 0 auto;
 }
@@ -83,11 +89,6 @@ a {
 .center_text {
   text-align: center;
 }
-/*.project_box {
-  padding: 0px 0px 20px 20px;
-  overflow: auto;
-  width: 1000px;
-}*/
 .project_text_box{
   background-color: black;
   color: white;
@@ -157,10 +158,10 @@ a {
 .float_left{
   height: 60px;
   float: left;
+  margin-right: 10px;
 }
 #psi_image{
   margin-top: 15px;
-  margin-right: 15px;
 }
 @media only screen and (max-width: 800px) {
     .double_div {
