@@ -79,7 +79,7 @@ a {
   text-decoration: underline;
 }
 .a_link:hover{
-  color: #999999;
+  opacity: 0.6;
 }
 .center {
   display: block;
@@ -156,15 +156,13 @@ a {
 }
 .float_left{
   float: left;
-  margin-top: 10px;
   margin-right: 10px;
-  margin-bottom: 10px;
 }
 .clear_left{
   clear: left;
 }
 #psi_image{
-  margin-top: 15px;
+  margin-top: 17px;
 }
 .img_30h{
   height: 30px;
