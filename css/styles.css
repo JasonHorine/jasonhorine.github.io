@@ -50,12 +50,14 @@ html {
 body {
   font-family: 'Oxygen', Arial, sans-serif;
   /*font-size: 120%;*/
-  padding: 4px;
+  padding: 20px;
   background-color: #dddddd;
 }
 h1 {
   font-size: 290%;
   line-height: 120%;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 h2 {
   font-size: 240%;
@@ -64,6 +66,8 @@ h2 {
 h3 {
   font-size: 160%;
   line-height: 120%;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 p, ul {
   font-size: 120%;
@@ -170,7 +174,7 @@ a {
 .img_50h{
   height: 50px;
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 820px) {
     .double_div {
       width: 100%;
     }
@@ -179,9 +183,12 @@ a {
       /*size: 339px;*/
     }
 }
-@media only screen and (max-width: 569px) {
+@media only screen and (max-width: 589px) {
     .section__square{
       width: 100%;
+    }
+    body{
+      padding: 0px;
     }
 }
 
