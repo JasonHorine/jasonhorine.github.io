@@ -132,6 +132,12 @@ a {
   align-items: stretch;
   flex-wrap: wrap;
 }
+.blocks_frame{
+  width: 80%;
+  background-image: url("../images/background_frame.png");
+  background-size: 100% 100%;
+  padding: 10%;
+}
 .double_div{
   width: 66.66%;
   display: inline-block;
