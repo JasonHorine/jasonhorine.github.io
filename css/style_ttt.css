@@ -38,7 +38,7 @@ header {
 }
 
 .game-cell p {
-  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-family: "Comic Sans MS", arial, sans-serif;
   font-size: 80px;
   -webkit-margin-before: 0px;
   -webkit-margin-after: 0px;
