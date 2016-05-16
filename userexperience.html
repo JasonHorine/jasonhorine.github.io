@@ -50,6 +50,7 @@
   </script>
   <!-- (Flexslider end) -->
 
+
   <link  href="css/styles.css" rel="stylesheet">
   <title>Jason Horine</title>
 </head>
@@ -61,7 +62,7 @@
   </div>
     <div class="flex-container"> <!-- container for overflow -->
       <div class="flexslider">
-        <ul class="slides">
+        <ul class="slides" style="height: 1000px">
           <li>
             <img class="project_visual" src="./images/P3Find.png" img="image of search results in a programmable logic controller IDE"/>
             <div class="project_text_box">
@@ -89,9 +90,17 @@
             </div>
           </li>
           <li>
-            <script charset="ISO-8859-1" src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
-            <div class="project_visual wistia_embed wistia_async_d07q0m66d2 seo=false">
-            </div>
+            <video autobuffer autoloop loop controls>
+              <source src="./media/SysConWireNC.mp4">
+              <!-- <object type="video/mp4" data="/media/SysConWireNC.mp4" width="320" height="240">
+              <param name="src" value="/media/SysConWireNC.mp4">
+              <param name="autoplay" value="false">
+              <param name="autoStart" value="0"> -->
+              <!-- <p><a href="/media/SysCOnWireNC.mp4">Download this video file.</a></p>
+              </object> -->
+            </video>
+            <!-- <div class="project_visual wistia_embed wistia_async_d07q0m66d2 seo=false">
+            </div> -->
             <div class="project_text_box">
                 <p class="project_text">This brief video gives an overview of my most recent project. This is a wireframe of a completely re-imagined front end for a Programmable Logic Controller's (PLC) System Configuration. This project is still underway, so there is no final image to show. The video offers an overview of my process for designing this particular interface.</p>
             </div>
@@ -104,5 +113,7 @@
   <!-- <div id="bottom_quote">
     <p class="big_quote">Done right, the interface feels to the user like an extension of their thoughts, using it is just a natural progression towards the goal at hand. When the user interface can fade into the user's subconcsious mind, it is spot on.</p>
   </div> -->
+
+<script charset="ISO-8859-1" src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
 </body>
 </html>
