@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- reset -->
+    <link  href="css/reset.css" rel="stylesheet">
+
+    <meta charset="utf-8">
+
+    <title>Jason Horine</title>
+    <meta name="description" content="The HTML5 Herald">
+    <meta name="author" content="SitePoint">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!-- <link rel="stylesheet" href="css/styles.css?v=1.0"> -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <div class="blocks_frame">
+      <header id="header" class="">
+
+        <p class="section__content">
+          <a class="a_link" href="index.html">
+            <img class="float_left img_30h" src="./images/background_icon.png" alt="color blocks of gold, white, blue, red">
+            Home
+          </a>
+        </p>
+
+      </header><!-- /header -->
+      <a href="http://cloudlogr.jasonhorine.com" target="_blank">
+        <h2 class="center_text a_link"> CloudLogr </h2>
+      </a>
+      <p>The CloudLogr site is the beginnings of a web-sever based data-logging product for the Industrial Automation market.  The site is my MVP deliverable for an assignment to create and depoly my own application in about a week of coding.  This was the final week in the General Assembly Web Development Immersive course.</p>
+      <ul><h3>About CloudLogr</h3>
+        <li>Node.js is the runtime engine.</li>
+        <li>mLab hosts the MongoDB database.</li>
+        <li>CloudLogr is currently deployed on Heroku.</li>
+      </ul>
+      <ul><h3>How CloudLogr Works</h3>
+        <li>Navigating to /tank initiates a route to send my credentials (stored as environment variables) to eWON's talk2m.com service and request a session ID.</li>
+        <li>From the JSON response, the session ID is picked out and then used to initiate a second request to retrieve data on a tank application available to me.</li>
+        <li>From the CSV response, the tank value is picked out and combined with a timestamp from the server and saved to the mLab database.</li>
+        <li>The response from mLab is used to dynamically build the table rendered to the user.</li>
+        <li>Refreshing the page repeats the process.</li>
+      </ul>
+      <p>The above list represents what I was able to complete in just under a week.  The list below is what I plan to do next.</p>
+      <ul><h3>Plans for CloudLogr</h3>
+        <li>Alter the database model to store methods that allow polling new data at an interval the user can set.  The methods were already tested, but need to be integrated in an object.</li>
+        <li>Create a matching API to allow interaction between the UI and methods.</li>
+        <li>Integrate React and Socket IO in the UI to allow SPA responsiveness in starting and stopping the polling and retrieving new values.</li>
+        <li>Add methods to allow controlling the tank process form the UI.  Would need to allow writing to two Boolean registers that represent a fill valve and drain valve.</li>
+        <li>Use Chart.js instead of a table to represent polled data.</li>
+        <li>Add more realistic error-handling.  It's currently blue-sky only.</li>
+    </div>
+  </body>

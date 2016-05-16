@@ -44,7 +44,7 @@ Tx red: #F51E1E
   background-color: #EFEFEF;
 }
 html {
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 body {
@@ -83,7 +83,7 @@ a {
   text-decoration: underline;
 }
 .a_link:hover{
-  opacity: 0.6;
+  opacity: 0.5;
 }
 .center {
   display: block;
@@ -136,7 +136,8 @@ a {
   width: 80%;
   background-image: url("../images/background_frame.png");
   background-size: 100% 100%;
-  padding: 20px 10% 10% 10%;
+  padding: 40px 50px;
+  margin: 0 auto;
 }
 .double_div{
   width: 66.66%;
