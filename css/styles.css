@@ -75,6 +75,10 @@ p, ul {
   letter-spacing: 1px;
   padding-top: 10px;
 }
+video {
+  width: 100%;
+  max-width: 640px;
+}
 a {
   color: inherit;
   text-decoration: inherit;
