@@ -181,7 +181,7 @@ a {
 .img_50h{
   height: 50px;
 }
-@media only screen and (max-device-width: 820px) {
+@media only screen and (max-width: 820px) {
     .double_div {
       width: 100%;
     }
@@ -190,7 +190,7 @@ a {
       /*size: 339px;*/
     }
 }
-@media only screen and (max-device-width: 589px) {
+@media only screen and (max-width: 589px) {
     .section__square{
       width: 100%;
     }
