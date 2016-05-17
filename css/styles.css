@@ -162,6 +162,27 @@ a {
   padding: 5px 50px 40px 50px;
   margin: 0 auto;
 }
+.header_exp{
+  width: 80%;
+  background-image: url("../images/header_background.png");
+  background-size: 100% 100%;
+  padding: 0px 50px;
+  margin: 0 auto;
+}
+.blocks_frame_mid{
+  width: 80%;
+  background-image: url("../images/background_frame_mid.png");
+  background-size: 100% 100%;
+  padding: 5px 50px 40px 50px;
+  margin: 0 auto;
+}
+.footer_exp{
+  width: 80%;
+  background-image: url("../images/footer_background.png");
+  background-size: 100% 100%;
+  padding: 0px 50px;
+  margin: 0 auto;
+}
 .double_div{
   width: 66.66%;
   display: inline-block;
