@@ -18,9 +18,9 @@ Tx red: #F51E1E
 .gold{
   background-color: #FFCB05;
 }
-/*.gold:hover{
+.gold:hover{
   background-color: #EFBB00;
-}*/
+}
 .blue{
   background-color: navy;
   color: white;
@@ -49,29 +49,28 @@ html {
 }
 body {
   font-family: 'Oxygen', Arial, sans-serif;
-  /*font-size: 120%;*/
   padding: 20px;
   background-color: #dddddd;
 }
 h1 {
-  font-size: 290%;
+  font-size: 2.4em;
   line-height: 120%;
   margin-top: 20px;
   margin-bottom: 10px;
 }
 h2 {
-  font-size: 240%;
+  font-size: 1.8em;
   line-height: 120%;
   margin-top: 20px;
 }
 h3 {
-  font-size: 160%;
+  font-size: 1.41em;
   line-height: 120%;
   margin-top: 10px;
   margin-bottom: 10px;
 }
-p, ul, button{
-  font-size: 120%;
+p, ul, button, span, a{
+  font-size: 1em;
   line-height: 140%;
   letter-spacing: 1px;
   padding-top: 10px;
@@ -96,8 +95,7 @@ a {
 .button_link{
   display: inline-block;
   color: black;
-  background-color: inherit;
-  background: #fffcf6;
+  background: #ffffff;
   border-radius: 10px;
   border-width: 1px;
   border-color: #aaaaaa;
@@ -137,7 +135,7 @@ a {
   width: 90%;
 }
 .big_quote{
-  font-size: 150%;
+  font-size: 1.5em;
   font-style: italic;
   line-height: 1.2;
 }
@@ -233,7 +231,7 @@ a {
   height: 50px;
 }
 #letter_image{
-  width: 350px;
+  height: 30px;
 }
 @media only screen and (max-width: 820px) {
     .double_div {
@@ -250,9 +248,6 @@ a {
     }
     body{
       padding: 0px;
-    }
-    #letter_image{
-      width: 260px;
     }
 }
 
