@@ -92,6 +92,9 @@ a {
 .a_link:hover{
   opacity: 0.5;
 }
+#linked_in:hover{
+  opacity: 0.5;
+}
 .button_link{
   display: inline-block;
   color: black;
