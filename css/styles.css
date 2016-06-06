@@ -75,6 +75,9 @@ p, ul, button, span, a{
   letter-spacing: 1px;
   padding-top: 10px;
 }
+strong{
+  font-weight: 700;
+}
 header{
   padding-top: 5px;
 }
