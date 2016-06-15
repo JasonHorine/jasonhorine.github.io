@@ -75,10 +75,10 @@ function clickCell(cellNum){
     if (!cellStatus[cellNum]){ // if this cell is null allow marking, otherwise skip
       setCell(cellNum, currentPlayer);  // set it to the current player
       if (currentPlayer == 1) {
-       $('#cell' + cellNum).html('<p>X</p>'); // update the DOM
+       $('#cell' + cellNum).html('<img src="./images/x_red.png" class="green">'); // update the DOM
       }
       if (currentPlayer == 2) {
-        $('#cell' + cellNum).html('<p>O</p>'); // update the DOM
+        $('#cell' + cellNum).html('<img src="./images/o_red.png" class="black">'); // update the DOM
       }
       // see if the round is over
       switch (getRoundWinner()){

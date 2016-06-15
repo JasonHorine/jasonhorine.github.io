@@ -2,7 +2,6 @@
   height: 480px;
   width: 290px;
   margin: 20px auto;
-
 }
 
 header {
@@ -10,6 +9,17 @@ header {
   padding-top: 5px;
   display: flex;
   justify-content: space-between;
+}
+
+p, h3{
+  padding: 0px 10px;
+}
+
+footer {
+  width: 290px;
+  padding-top: 10px;
+  display: flex;
+  justify-content: center;
 }
 
 .p1-score, .game-options, .p2-score, .btn-div, .game-cell{
@@ -37,22 +47,35 @@ header {
   margin: 0px;
 }
 
-.game-cell p {
-  font-family: arial;
-  font-size: 80px;
-  -webkit-margin-before: 0px;
-  -webkit-margin-after: 0px;
-  line-height: 166%; /*edited this line after the course*/
-  /*  added the following two lines after the course*/
-  position: relative;
-  top: -19%;
+.red { /* must start with saturated red image for color to be correct */
+    -webkit-filter: hue-rotate(0deg) saturate(100); /* Chrome, Safari, Opera */
+    filter: hue-rotate(0deg) saturate(100);
 }
 
-footer {
-  width: 290px;
-  padding-top: 10px;
-  display: flex;
-  justify-content: center;
+.green { /* must start with saturated red image for color to be correct */
+    -webkit-filter: saturate(100) hue-rotate(115deg); /* Chrome, Safari, Opera */
+    filter: saturate(100) hue-rotate(115deg);
+
+}
+
+.blue { /* must start with saturated red image for color to be correct */
+    -webkit-filter: hue-rotate(240deg) saturate(100); /* Chrome, Safari, Opera */
+    filter: hue-rotate(240deg) saturate(100);
+}
+
+.purple { /* must start with saturated red image for color to be correct */
+    -webkit-filter: hue-rotate(270deg) saturate(100); /* Chrome, Safari, Opera */
+    filter: hue-rotate(270deg) saturate(100);
+}
+
+.black { /* must start with saturated red image for color to be correct */
+    -webkit-filter: hue-rotate(270deg) saturate(0); /* Chrome, Safari, Opera */
+    filter: hue-rotate(270deg) saturate(0);
+}
+
+.game-cell img {
+  height: 80px;
+  margin: 7px 9px;
 }
 
 .turnPointer {
