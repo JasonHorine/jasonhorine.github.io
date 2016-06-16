@@ -4,7 +4,7 @@ $(function(){
   // hide the right pointer
   $('#player2Pointer').hide();
 
-  // if a cell is clicked:  (not DRY)
+  // if a cell is clicked:  (how to make DRY?)
   $('#cell0').click(function(){
     clickCell(0);
   });
@@ -34,13 +34,14 @@ $(function(){
   });
   //if reset is clicked:
   $('#resetBtn').click(function(){
-    audioClick();
     resetBoard();
   });
+  //change the mouse pointer
+
 });
 
 
-// initialize the variable for the cells
+// initialize the variables for the cells
 var cellStatus = [null, null, null, null, null, null, null, null, null];
 var p1Score = 0;
 var p2Score = 0;
@@ -52,6 +53,8 @@ var currentPlayer = 1; // 1 or 2
 
 
 function resetBoard(){
+  customAlert("Game on!", 1000);
+  audioBell();
   //reset the game board for a new game
   cellStatus = [null, null, null, null, null, null, null, null, null];
   // update the DOM
@@ -64,6 +67,8 @@ function resetBoard(){
   goesFirst ? currentPlayer = 2 : currentPlayer = 1;
   // reset the roundDone Boolean
   roundDone = false;
+  // change whose turn it is
+  changePlayer();
 }
 
 function clickCell(cellNum){
@@ -72,15 +77,15 @@ function clickCell(cellNum){
   } else {
     if (!cellStatus[cellNum]){ // if this cell is null allow marking, otherwise skip
       audioClick(); // play the click sound
-      setCell(cellNum, currentPlayer);  // set it to the current player
+      setCell(cellNum, currentPlayer);  // set the cell var to the current player
       if (currentPlayer == 1) {
-       $('#cell' + cellNum).html('<img src="./images/x_red.png" class="green">'); // update the DOM
+       $('#cell' + cellNum).html('<img src="./images/x_red.png" class="red">'); // update the DOM
       }
       if (currentPlayer == 2) {
         $('#cell' + cellNum).html('<img src="./images/o_red.png" class="black">'); // update the DOM
       }
       // see if the round is over
-      switch (getRoundWinner()){
+      switch (getRoundWinner()){ // getRoundWinner() checks for a complete round
         case 1: // player 1 has won
           celebrate(1);
           break;
@@ -88,15 +93,15 @@ function clickCell(cellNum){
           celebrate(2)
           break;
         case 3: // draw
-          alert("A draw  :(");
+          customAlert("Tie", 1500);
           break;
         default: // keep playing
+          changePlayer();  // now it's the other player's turn
           break;
       }
-
-      changePlayer();  // now it's the other player's turn
+      // changePlayer();  // now it's the other player's turn
     } else {
-      audioBuzz(); // play buzz sound from <audio> if cell was occupied
+      audioBuzz(); // play buzz sound from <audio> if the selected cell was occupied
     }
 
   }
@@ -148,6 +153,10 @@ function audioClick() {
 
 function audioCheer() {
   $("#cheer")[0].play(); // audio from HTML <audio>
+}
+
+function audioBell() {
+  $("#bell")[0].play(); // audio from HTML <audio>
 }
 
 function setCell(cell, playerNumber){
@@ -223,11 +232,21 @@ function changePlayer(){
     $('#player2Pointer').hide(); // hide right pointer
   }
 }
+
 function celebrate(playerNumber){
   // if a winner if found acknowledge the player and increment score
   audioCheer();
-  alert("Player " + playerNumber + " wins!!!");
+  customAlert("Player " + playerNumber + " wins!!!", 2000);
+}
 
+function customAlert(msg,duration){
+  var styler = document.createElement("div");
+  styler.setAttribute("class","popUp");
+  styler.innerHTML = "<div>"+msg+"</div>";
+  setTimeout(function(){
+    styler.parentNode.removeChild(styler);
+  },duration);
+ document.body.appendChild(styler);
 }
 
 
