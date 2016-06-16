@@ -4,7 +4,7 @@ $(function(){
   // hide the right pointer
   $('#player2Pointer').hide();
 
-  // if a cell is clicked:
+  // if a cell is clicked:  (not DRY)
   $('#cell0').click(function(){
     clickCell(0);
   });
@@ -34,12 +34,10 @@ $(function(){
   });
   //if reset is clicked:
   $('#resetBtn').click(function(){
+    audioClick();
     resetBoard();
   });
-
 });
-// if a cell is clicked:
-
 
 
 // initialize the variable for the cells
@@ -73,6 +71,7 @@ function clickCell(cellNum){
     resetBoard();
   } else {
     if (!cellStatus[cellNum]){ // if this cell is null allow marking, otherwise skip
+      audioClick(); // play the click sound
       setCell(cellNum, currentPlayer);  // set it to the current player
       if (currentPlayer == 1) {
        $('#cell' + cellNum).html('<img src="./images/x_red.png" class="green">'); // update the DOM
@@ -96,7 +95,10 @@ function clickCell(cellNum){
       }
 
       changePlayer();  // now it's the other player's turn
+    } else {
+      audioBuzz(); // play buzz sound from <audio> if cell was occupied
     }
+
   }
 }
 
@@ -135,6 +137,18 @@ function clickCell(cellNum){
 //     }
 //   }
 // }
+
+function audioBuzz() {
+  $("#buzz")[0].play(); // audio from HTML <audio>
+}
+
+function audioClick() {
+  $("#click")[0].play(); // audio from HTML <audio>
+}
+
+function audioCheer() {
+  $("#cheer")[0].play(); // audio from HTML <audio>
+}
 
 function setCell(cell, playerNumber){
   cellStatus[cell] = playerNumber;
@@ -211,10 +225,12 @@ function changePlayer(){
 }
 function celebrate(playerNumber){
   // if a winner if found acknowledge the player and increment score
+  audioCheer();
   alert("Player " + playerNumber + " wins!!!");
+
 }
 
 
 
-// pseudo code:
+
 
