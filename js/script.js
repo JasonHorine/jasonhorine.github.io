@@ -65,10 +65,12 @@ function resetBoard(){
   goesFirst = !goesFirst;
   // set current player to start the game
   goesFirst ? currentPlayer = 2 : currentPlayer = 1;
+  // set current pointer
+  pointerControl(currentPlayer);
   // reset the roundDone Boolean
   roundDone = false;
   // change whose turn it is
-  changePlayer();
+  // changePlayer();
 }
 
 function clickCell(cellNum){
@@ -93,72 +95,42 @@ function clickCell(cellNum){
           celebrate(2)
           break;
         case 3: // draw
+          audioAww();
           customAlert("Tie", 1500);
           break;
         default: // keep playing
           changePlayer();  // now it's the other player's turn
           break;
       }
-      // changePlayer();  // now it's the other player's turn
     } else {
       audioBuzz(); // play buzz sound from <audio> if the selected cell was occupied
     }
-
   }
 }
 
-// function playTo(rounds){
-//   // if score != 0:0 but game is not finished
-//   if ((!p1Score || !p2Score) && ((p1Score != goal) || (p2Score != goal))) {
-//     // prompt are you sure?
-//     var roundsPrompt = prompt ("Are you sure?  The game will reset.");
-//       // yes: set goal to (rounds), else do nothing and return
-//     if (roundsPrompt){
-//       goal = rounds;
-//     }
-//   // else set goal to (rounds), reset game, return
-//   } else {
-//     goal = rounds;
-//     resetGame();
-//   }
-// }
-
-
-
-// function resetGame(){
-//   //if score = 0:0 or either score won the game, allow reset without prompt
-//   if ((!p1Score && !p2Score) || (p1Score == goal) || (p2Score == goal)){
-//     // call resetBoard()
-//     resetBoard();
-//     //if there was a score, prompt to make sure.
-//   } else {
-//     //prompt: are you sure?
-//     var resetAnswer = prompt("Reset the game?");
-//       //Yes: call resetBoard() and clear the scores
-//     if (resetAnswer){
-//       resetBoard();
-//       p1Score = 0;
-//       p2Score = 0;
-//     }
-//   }
-// }
-
-function audioBuzz() {
-  $("#buzz")[0].play(); // audio from HTML <audio>
+//////////////////////////////////////////////////////
+//      Sounds
+//////////////////////////////////////////////////////
+function audioAww() {
+  $("#aww")[0].play(); // audio from HTML <audio>
 }
 
-function audioClick() {
-  $("#click")[0].play(); // audio from HTML <audio>
+function audioBell() {
+  $("#bell")[0].play(); // audio from HTML <audio>
+}
+function audioBuzz() {
+  $("#buzz")[0].play(); // audio from HTML <audio>
 }
 
 function audioCheer() {
   $("#cheer")[0].play(); // audio from HTML <audio>
 }
 
-function audioBell() {
-  $("#bell")[0].play(); // audio from HTML <audio>
+function audioClick() {
+  $("#click")[0].play(); // audio from HTML <audio>
 }
 
+// mark a cell as occupied
 function setCell(cell, playerNumber){
   cellStatus[cell] = playerNumber;
 }
@@ -210,43 +182,69 @@ function getRoundWinner(){
   }
 }
 
-// function getGameWinner(){
-//   // if there is a winner, return 1 or 2.  If no winner, return 0.
-//   if (p1Score == rounds){
-//     return 1;
-//   } else if (p2Score == rounds){
-//     return 2;
-//   } else {
-//     return 0;
-//   }
-// }
-
 function changePlayer(){
   if (currentPlayer == 1){ // if 1 is current
     currentPlayer = 2; // change it to 2
-    $('#player1Pointer').hide(); // hide left pointer
-    $('#player2Pointer').show(); // show right pointer
-  } else if (currentPlayer == 2){ // if 2 is current
+  } else { // if 2 is current
     currentPlayer = 1; // change it to 1
-    $('#player1Pointer').show(); // show left pointer
-    $('#player2Pointer').hide(); // hide right pointer
+  }
+  pointerControl(currentPlayer); // change the pointer
+}
+
+// control visibility of the pointer:
+// 0: turn off
+// 1: player 1
+// 2: player 2
+function pointerControl(player){
+  switch (player){
+    case 0: // hide all
+      $('#player1Pointer').hide(); // hide left pointer
+      $('#player2Pointer').hide(); // show right pointer
+      $('#pointerDiv').hide(); // show the text div
+      break;
+    case 1: // for player 1, left
+      $('#player1Pointer').show(); // hide left pointer
+      $('#player2Pointer').hide(); // show right pointer
+      $('#pointerDiv').show(); // show the text div
+      break;
+    case 2: // for player 2, right
+      $('#player1Pointer').hide(); // hide left pointer
+      $('#player2Pointer').show(); // show right pointer
+      $('#pointerDiv').show(); // show the text div
+      break;
+    default:
+      break; // no action
   }
 }
 
-function celebrate(playerNumber){
-  // if a winner if found acknowledge the player and increment score
-  audioCheer();
-  customAlert("Player " + playerNumber + " wins!!!", 2000);
+// alter the pointer to celebrate a win
+function winPointer(){
+  var originalText = $('#pointerDiv').html; // store the pointerDiv text
+  $('#pointerDiv').html('<div id="pointerDiv" class="turnPointer">Winner!</div>');
+  var intervalID = setInterval(function(){ // start flashing and preserve ID
+
+  })
+  setTimeout(function(){ // delay to stop flashing
+    clearInterval(intervalID); // use the ID to stop flashing
+  }, 2000); // 2s delay
+  $('#pointerDiv').html(originalText); // return to original text
 }
 
-function customAlert(msg,duration){
-  var styler = document.createElement("div");
-  styler.setAttribute("class","popUp");
-  styler.innerHTML = "<div>"+msg+"</div>";
+
+function celebrate(playerNumber){
+  // if a winner was found, acknowledge the player
+  audioCheer(); // play cheer
+  customAlert("Player " + playerNumber + " wins!!!", 2000); // show pop up for 2s
+}
+
+function customAlert(msg,duration){ // copied and modified from stack overflow could be better
+  var msgDiv = document.createElement("div");
+  msgDiv.setAttribute("class","popUp");
+  msgDiv.innerHTML = "<div>"+msg+"</div>";
   setTimeout(function(){
-    styler.parentNode.removeChild(styler);
+    msgDiv.parentNode.removeChild(msgDiv);
   },duration);
- document.body.appendChild(styler);
+ document.body.appendChild(msgDiv);
 }
 
 
