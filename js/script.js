@@ -1,9 +1,12 @@
 
 // document ready:
 $(function(){
-  // hide the right pointer
-  $('#player2Pointer').hide();
-
+  // pop-up
+  customAlert("Game on!", 1000);
+  // ring bell
+  audioBell();
+  // player 1 goes first on page refresh, set it
+  pointerControl(1);
   // if a cell is clicked:  (how to make DRY?)
   $('#cell0').click(function(){
     clickCell(0);
@@ -36,8 +39,6 @@ $(function(){
   $('#resetBtn').click(function(){
     resetBoard();
   });
-  //change the mouse pointer
-
 });
 
 
