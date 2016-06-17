@@ -86,14 +86,19 @@ img {
     cursor: no-drop;
 }
 
-.popUp {
-  display: block;
-  position: absolute;
-  top:  160px;
-  left: 10px;
+.pop-up {
+  display: none;
+  position: relative;
+  top:  -230px;
+  left: 67px;
+  z-index: 1;
+  width: 120px;
   color: white;
   background: Navy;
   padding: 15px;
+  font-size: 26px;
+  letter-spacing: 1.5px;
+  text-align: center;
 }
 
 .turnPointer {

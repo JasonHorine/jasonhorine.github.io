@@ -230,24 +230,16 @@ function winPointer(){
   $('#pointerDiv').html(originalText); // return to original text
 }
 
-
 function celebrate(playerNumber){
   // if a winner was found, acknowledge the player
   audioCheer(); // play cheer
   customAlert("Player " + playerNumber + " wins!!!", 2000); // show pop up for 2s
 }
 
-function customAlert(msg,duration){ // copied and modified from stack overflow could be better
-  var msgDiv = document.createElement("div");
-  msgDiv.setAttribute("class","popUp");
-  msgDiv.innerHTML = "<div>"+msg+"</div>";
-  setTimeout(function(){
-    msgDiv.parentNode.removeChild(msgDiv);
+function customAlert(msg,duration){
+  $('.pop-up').html(msg); // change the text in the pop-up div
+  $('.pop-up').show(); // make the pop-up visible
+  setTimeout(function(){ // hide the pop-up after duration has passed
+    $('.pop-up').hide();
   },duration);
- document.body.appendChild(msgDiv);
 }
-
-
-
-
-
