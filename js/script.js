@@ -36,17 +36,17 @@ $(function(){
     clickCell(8);
   });
   //if reset is clicked:
-  $('#resetBtn').click(function(){
+  $('#reset-btn').click(function(){
     resetBoard();
   });
 });
 
 
 // initialize the variables for the cells
-var cellStatus = [null, null, null, null, null, null, null, null, null];
-var p1Score = 0;
-var p2Score = 0;
-var goal = 3; // default game is best 2/3
+var cellStatus = [null, null, null, null, null, null, null, null, null]; // tracks the status of the board
+// var p1Score = 0;
+// var p2Score = 0;
+// var goal = 3; // default game is best 2/3
 var goesFirst = 0;  // player 1 goes first on first round
 var roundDone = false; // set if round is complete
 var gameDone = false;  // set if game is complete
@@ -54,9 +54,9 @@ var currentPlayer = 1; // 1 or 2
 
 
 function resetBoard(){
-  customAlert("Game on!", 1000);
-  audioBell();
-  //reset the game board for a new game
+  customAlert("Game on!", 1000); // show 'game on' alert for 1s
+  audioBell(); // ring bell
+  //reset the game board array var for a new game
   cellStatus = [null, null, null, null, null, null, null, null, null];
   // update the DOM
   for (i = 0; i < 9; i++){ // iterate through all cells of the board.

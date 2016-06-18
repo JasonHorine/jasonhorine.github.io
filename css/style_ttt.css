@@ -17,7 +17,8 @@ footer {
 }
 
 body {
-  background-color: aliceblue;
+  background-image: url("../images/background-watercolor.jpg");
+  background-size: 90px;
 }
 
 .overall-area {
@@ -34,6 +35,10 @@ body {
   background-color: rgb(238, 238, 238);
 }
 
+#reset-btn{
+  font-size: 30px;
+}
+
 .game-board{
     width: 288px;
     height: 288px;
@@ -46,7 +51,7 @@ body {
   width: 92px;
   height: 92px;
   border: inset 2px blue;
-  background-color: lightgrey;
+  background-color: rgb(238, 238, 238);
   margin: 0px;
 }
 
