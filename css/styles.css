@@ -204,6 +204,12 @@ a {
   margin-bottom: 10px;
   margin-left: 10px;
 }
+.exp_image_right{
+  float: right;
+  margin: 10px;
+  width: 256px;
+  box-shadow: 7px 7px 5px grey;
+}
 .clear_right{
   clear: right;
 }
