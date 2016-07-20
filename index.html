@@ -1,123 +1,306 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Google Analytics script -->
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-77947641-1', 'auto');
-      ga('send', 'pageview');
-    </script>
-    <!-- reset -->
-    <link  href="css/reset.css" rel="stylesheet">
-
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
 
     <title>Jason Horine</title>
-    <meta name="description" content="The HTML5 Herald">
-    <meta name="author" content="SitePoint">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="icon" href="./images/JasonMugTp3.png">
 
+    <!-- Bootstrap core CSS CDN -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="css/styles.css">
-    <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles -->
+    <link href="css/navbar-fixed-top.css" rel="stylesheet">
+    <link  href="css/carousel.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
-    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <link rel="icon" href="./images/background_icon.png">
   </head>
 
   <body>
-    <!-- <script src="js/scripts.js"></script> -->
 
-  <!-- Hi, I'm Jason block -->
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <span class="navbar-brand">JasonHorine.com</span>
+        </div>
+        <div class="navbar-collapse collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#dev">Dev</a></li>
+            <li><a href="#ux">UX</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <!-- <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li class="dropdown-header">Nav header</li>
+                <li><a href="#">Separated link</a></li>
+                <li><a href="#">One more separated link</a></li>
+              </ul>
+            </li> -->
+          </ul>
+          <!-- <ul class="nav navbar-nav navbar-right">
+            <li><a href="../navbar/">Default</a></li>
+            <li><a href="../navbar-static-top/">Static top</a></li>
+            <li class="active"><a href="./">Fixed top <span class="sr-only">(current)</span></a></li>
+          </ul> -->
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
 
-    <div class="blocks_container" >
-      <div class="double_div gold">
+    <div id="home" class="container anchor_target">
+      <div class="jumbotron">
+        <h1>Jason Horine</h1>
+        <div class="row">
+          <div class="col-sm-8 col-lg-9">
+            <p></p>
+            <p>problem solver | engineer | web developer</p>
+            <p>interaction designer | customer-advocate</p>
+          </div>
+          <img class="col-sm-4 col-lg-3 pull-right" src="images/JasonMugTp3.png" alt="cartoon image" width="256" height="256">
+        </div>
+      </div> <!-- /jumbotron -->
+    </div> <!-- /container -->
 
-        <h1>Hi, I'm Jason</h1>
-        <div class="doubl_div__content">
-          <h3><img class="float_right" src="./images/JasonMugTp3.png" alt="crayon drawing of Jason">Problem solver and full-stack Web Developer with an eye for the application of Psychology in web design</h3>
-          <div class="center_text">
-            <a href="mailto:JasonHorine@iCloud.com?subject=Your Portfolio" "email me"><img id="letter_image" src="./images/email.png" alt="letter"><span class="a_link">JasonHorine@iCloud.com</span></a>
+    <!-- Featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="container">
+      <div class="container dev-container">
+        <h1 id="dev" class="anchor_target featurette-heading"><strong>Development</strong></h1>
+        <br>
+
+        <!-- Dev examples snippets-->
+        <div class="row">
+
+          <div class="col-md-4 col-sm-6">
+            <h2>CloudLogr: <br><span class="text-muted">full-stack Node.js</span></h2>
+            <p>SPA front end via AJAX with a MongoDB database.  The server will continue to log data even if the browser disconnects.</p>
+            <img class="img-responsive" src="images/cl_screen_shot.jpg" alt="image of Cloud Logger">
+            <p></p>
+            <!-- <p><a class="btn btn-info on_page_link" href="#featurette_cloudlogr" role="button">More Info &raquo;</a></p> -->
+            <p><a class="btn btn-primary on_page_link" href="http://cloudlogr.jasonhorine.com/" target="_blank" role="button">Live Demo &raquo;</a></p>
+            <p><a class="btn btn-primary on_page_link" href="https://github.com/JasonHorine/cloudlogr" target="_blank" role="button">GitHub Repo &raquo;</a></p>
+          </div>
+
+          <hr class="visible-xs">
+
+          <div class="col-md-4 col-sm-6">
+            <h2>Good Whiskers: <br><span class="text-muted">full-stack Rails</span></h2>
+            <p>This product review site was a group project with CRUD routes and secure user-authentication.</p>
+            <img class="img-responsive" src="images/gw_screen_shot.jpg" alt="beard oil image">
+            <p></p>
+            <!-- <p><a class="btn btn-info on_page_link" href="#featurette_good_whiskers" role="button">More Info &raquo;</a></p> -->
+            <p><a class="btn btn-primary on_page_link" href="http://goodwhiskers.herokuapp.com/" target="_blank" role="button">Live Demo &raquo;</a></p>
+            <p><a class="btn btn-primary on_page_link" href="https://github.com/JasonHorine/goodwhiskers" target="_blank" role="button">GitHub Repo &raquo;</a></p>
+          </div>
+
+          <div class="clearfix visible-sm"></div>
+
+          <hr class="visible-xs">
+
+          <div class="col-md-4 col-sm-6">
+            <h2>Tic-Tac-Toe: <br><span class="text-muted">HTML, CSS and jQuery</span></h2>
+            <p>This started as a weekend jQuery homework assignment that I've kept adding things to.  It is designed for kids to use on mobile devices.</p>
+            <img class="img-responsive" src="images/ttt_screen_shot.png" alt="Tic Tac Toe image">
+            <p></p>
+            <!-- <p><a class="btn btn-info on_page_link" href="#featurette_tic_tac_toe" role="button">More Info &raquo;</a></p> -->
+            <p><a class="btn btn-primary on_page_link" href="http://jasonhorine.github.io./ttt.html" target="_blank" role="button">Live Demo &raquo;</a></p>
+            <p><a class="btn btn-primary on_page_link" href="https://github.com/JasonHorine/tic-tac-toe" target="_blank" role="button">GitHub Repo &raquo;</a></p>
+          </div>
+
+        </div><!-- /.row -->
+
+        <!-- START THE Dev FEATURETTES -->
+        <!-- DEV Examples -->
+
+        <!-- <hr class="featurette-divider">
+
+        <div class="row featurette anchor_target" id="featurette_cloudlogr">
+          <div class="col-md-7">
+            <h2 class="featurette-heading">CloudLogr<br><span class="text-muted">full-stack Node.js application</span></h2>
+            <p class="lead">The CloudLogr site is a functional mock-up of a web-server based data-logging application for the Industrial Automation market.  Node.js, MongoDB are used on the back end.  The front end is mostly an SPA, built with jQuery, Chart.js and AJAX.</p>
+            <p>The site originally acquired data through a development API provided by <a href="https://ewon.biz/" target="blank">eWON</a>. Since the API expired, randomized data is now generated by my own code. This assignment comprised the final week in the General Assembly Web Development Immersive course.</p>
+            <h3>Main Features of CloudLogr</h3>
+            <ul>
+              <li>The primary requirement for this concept to be useful was to have the Node.js server poll the hardware (a storage tank in my example) at a regular interval to retrieve data to store in my database, even while no browser is connected. An API route from the browser kicks that process off and its new status ("pollingState": true) is recorded in the database. That process will continue until another route is hit that updates the status in the database. If "pollingState": false is written to the database, the next time the poll process 'wakes' to take a reading, it will instead shut itself down.</li>
+              <li>The browser has similar polling behavior. When the browser renders tank.html, javascript checks to see whether the server reported that it is polling. If the server is polling, the browser will automatically begin polling the server via AJAX at the same rate. Just the data needed is sent back to the AJAX request to allow redrawing the table and chart.</li>
+            </ul>
+            <h3>Getting New Data via eWON</h3>
+              <p>A method on the model was used to read from the eWON. First, my credentials (stored as environment variables) were used to request a session ID.  From the JSON response, the session ID was picked out and then used to initiate a second request to retrieve my process data.  The data arrived in CSV.  The value was picked out and combined with a timestamp from the server and saved to the mLab database.Simultaneously, the server logged back out of the eWON API.</p>
+            <h3>Plans for CloudLogr</h3>
+            <ul>
+              <li>Move setting the poll rate to AJAX for SPA behavior.</li>
+              <li>Styling could still use some attention.  Bootstrap was just recently added.  I'll use that to pretty it up.</li>
+              <li>Integrate Socket.io in the UI to allow the page to react to new data having arrived in the database, instead of the browser polling independently.</li>
+              <li>Add methods to allow controlling the tank process from the UI. Two Boolean variables would represent mechanical drain and fill valves on the tank.</li>
+              <li>Allow the user to alter how much data is displayted on screen.</li>
+              <li>Add more realistic error-handling. It's currently blue-sky only.</li>
+              <li>Add authentication and sessions.</li>
+            </ul>
+          </div>
+          <div class="col-md-5">
+            <img class="featurette-image img-responsive center-block" src="./images/cl_screen_shot.jpg" alt="cloud logger image">
           </div>
         </div>
-      </div><!-- eliminating the space at the carriage return with a comment
 
-   Who is Jason? block
+        <hr class="featurette-divider">
 
-   --><section class="section__square white">
-        <h3 class="section__title center_text">Who is Jason?</h3>
-        <ul>Other Work Experience:
-          <li>Debugging Customer Programs</li>
-          <li>UX (Interaction Design)</li>
-          <li>E-commerce Business</li>
-          <li>Industrial Automation</li>
-          <li>Electrical Engineering</li>
-          <li>Electronics Manufacturing</li>
-        </ul>
-        <a href="https://www.linkedin.com/in/jhorine" target="_blank">
-          <img id="linked_in" class="center img_30h" src="./images/Logo-Black-34px-TM.png" alt="Linked In">
-        </a>
-      </section><!--
-
-  Psychology of Design block
-
-   --><section class="section__square green">
-          <a href="userexperience.html">
-            <h3 class="section__title center_text">Psychology of Design</h3>
-            <img id="psi_image" class="float_left img_50h" src="./images/PsiMedRes.png" alt="character representing the field of psychology">
-            <p>Interaction Design and Marketing fascinate me!  To be done well, both require creativity and the application of Psychology.</p>
-            <p>I see interaction design and marketing theory at play everywhere, and I enjoy <span class="a_link">applying them to my work</span>.</p>
-          </a>
-        </section><!--
-
-  Projects block
-
-    --><section class="section__square blue center_text">
-          <h3 class="section__title">Some Projects</h3>
-
-          <div class="button_group_wrapper_vert">
-            <div>
-              <img class="img_30h img_button" src="./images/background_icon.png" alt="blocks"><a class="button_link" href="jhc_exp.html">This Site!</a>
-            </div>
-
-            <div>
-              <img class="img_30h img_button" src="./images/graph60px.png" alt="graph"><a class="button_link" href="cl_exp.html">CloudLogr</a>
-            </div>
-
-            <div>
-              <img class="img_30h img_button" src="./images/TicTacToe60px.jpg" alt="Tic Tac Toe board"><a class="button_link" href="ttt_exp.html">Tic-Tac-Toe</a>
-            </div>
-
-
-            <div>
-              <img class="img_30h img_button" src="./images/beard_oil.jpg" alt="beard oil product label"><a class="button_link" href="gw_exp.html">Good Whiskers</a>
-            </div>
-
-            <div>
-              <img class="img_30h img_button" src="./images/GitHub-Mark-Light-64px.png" alt="git hub icon"><a class="button_link" href="https://github.com/jasonhorine" target="_blank">See the Code</a>
-            </div>
+        <div class="row featurette anchor_target" id="featurette_tic_tac_toe">
+          <div class="col-md-7 col-md-push-5">
+            <h2 class="featurette-heading">Tic-Tac-Toe<br><span class="text-muted">HTML, CSS and jQuery</span></h2>
+            <p class="lead">This game began as my deliverable for a JavaScript and jQuery weekend homework assignment just two weeks into General Assembly's Web Immersive program. My personal goal was to build a game to run on smart phones. I especially wanted it to run well on old hand-me-down hardware, such as kids are most likely to have in hand.</p>
+            <p class="lead">Recent changes aimed to make the game a little more engaging for little ones by adding audible feedback. These changes also aimed to make the rules more readily apparent to newcomers without spelling them out.</p>
+            <h3>Future Plans</h3>
+            <ul>
+              <li>Attach an X or O image (of the correct color) to the pointer dependent on which players' turn it is and the status of the cell the pointer is over.</li>
+              <li>Either have the 'winner' message show the player's marker and/or mark the winning row on the game board.</li>
+              <li>Best 2/3 or 3/5 games with scoreboard.</li>
+              <li>CSS is already in place to allow players to pick marker colors.  Implement that.</li>
+            </ul>
           </div>
-      </section><!--
+          <div class="col-md-5 col-md-pull-7">
+            <img class="featurette-image img-responsive center-block" src="./images/ttt_screen_shot.png" alt="tic tac toe image">
+          </div>
+        </div>
 
-  No, Really, Who is Jason? block
+        <hr class="featurette-divider">
 
-    --><section class="section__square red">
-        <h3 class="section__title center_text">No, Really, Who is Jason?</h3>
-        <ul>What would it be like to have this guy on our team?
-          <li>Father & Husband</li>
-          <li><a href="http://austin.backonmyfeet.org/" class="a_link" target="_blank">Back on My Feet</a> Volunteer Runner</li>
-          <li>Cyclist</li>
-          <li>Gardener</li>
-          <li>Yogi</li>
-          <li>Veteran</li>
-          <li>Cook (Chef?)</li>
-        </ul>
-      </section><!--
-  --></div>
+        <div class="row featurette anchor_target" id="featurette_good_whiskers">
+          <div class="col-md-7">
+            <h2 class="featurette-heading">Good Whiskers<br><span class="text-muted">full-stack Rails application</span></h2>
+            <p class="lead">The Good Whiskers site is a crowd-sourced forum for beard-grooming products. The site is my team's deliverable for an assignment to create and deploy a full-stack Rails CRUD application with secure user authentication in about 4.5 days' coding. This was week six in General Assembly Web Development Immersive course.</p>
+            <h3>Requirements of the Assignment</h3>
+            <ul>
+              <li>Have at least 2 models (more if they make sense) – one representing someone using your application, and one that represents the main functional idea for your app</li>
+              <li>Include sign up/log in functionality, with encrypted passwords & an authorization flow</li>
+              <li>Have complete RESTful routes for at least one of your resources with GET, POST, PUT, and DELETE</li>
+              <li>Utilize an ORM (ActiveRecord) to create a database table structure and interact with your relationally-stored data</li>
+              <li>Include wireframes that you designed during the planning process</li>
+              <li>Have semantically clean HTML and CSS</li>
+              <li>Be deployed online and accessible to the public</li>
+            </ul>
+            <p>For about four days' worth of coding, we generally liked what we were able to throw together. In reflection, my team agreed that our biggest shortcoming was underestimating the task of creating a look for the site and setting aside sufficient time for styling the various pages.</p>
+            <p>We had no style guide and it really shows as you navigate around the site. Individual pages were styled differently to personal tastes by each developer. (live and learn!) To see what I did specifically on this project, please click my GitHub link on the home page.</p>
+            <p>Feel free to sign in and comment on or add some beard products!</p>
+          </div>
+          <div class="col-md-5">
+            <img class="featurette-image img-responsive center-block" src="./images/gw_screen_shot.jpg" alt="good whiskers image">
+          </div>
+        </div>
+      </div> -->
+
+      <!-- END THE DEV FEATURETTES -->
+      <!-- START THE UX FEATURETTES -->
+      <!-- UX Examples -->
+
+      <div class="container ux-container">
+        <h1 id="ux" class="anchor_target featurette-heading"><strong>UX</strong></h1>
+        <br>
+        <div class="row featurette">
+          <div class="col-md-5">
+            <h2 class="featurette-heading">Industrial Controller Configuration Dashboard<span class="text-muted"></span></h2>
+            <p class="lead">Do-more! is a powerhouse for hardware in its price range.  However, the power of this platform only becomes apparent to those willing to get past the learning curve.  I took on this project after repeatedly hearing the same types of complaints from customers and Tech Support.  The video explains my process for this complicated project.</p>
+            </div>
+          <div class="col-md-7">
+            <video class="featurette-image img-responsive center-block" src="./media/SysConWireNC.mp4" autobuffer autoloop loop controls poster="./images/SysConWireNC.jpg"></video>
+          </div>
+        </div>
+        <hr>
+        <div class="row featurette">
+          <div class="col-md-5 col-md-push-7">
+            <h2 class="featurette-heading">IDE Find / Replace<span class="text-muted"></span></h2>
+            <p class="lead">A search for text in the project in an IDE can return hits in multiple types of documents.  To organize the multiple locations and document types, a familiar directory tree structure is used.  Three-state indicators show whether all, some or none of the folder contents will be changed by the Replace function.</p>
+          </div>
+          <div class="col-md-7 col-md-pull-5">
+            <img class="featurette-image img-responsive center-block" src="images/P3Find.png" alt="PLC search result image">
+          </div>
+        </div>
+        <hr>
+      </div> <!-- end ux-container -->
+      <!-- /END THE UX FEATURETTES -->
+
+      <!-- ABOUT -->
+      <div id="about" class="container anchor_target">
+        <div class="jumbotron">
+          <h2>About</h2>
+          <p>I trained for full-stack development and love interaction design, so staying near the front end of the stack is more interesting to me.  However, the database end tends to feel more straight-forward when I build things.  I am willing to do either or both, as long as I continue to learn, learn, learn.  I keep my <a href="https://www.linkedin.com/in/jhorine" target="_blank"><img style="height: 27px; padding-bottom: 4px;" src="images/Logo-Black-34px-TM.png" alt="linked in"></a> profile up-to-date, so please check there for more resume-like information on me.</p>
+          <h3>Aside from web development and UX, I have also:</h3>
+          <ul>
+            <li>debugged many customers' <a href="https://en.wikipedia.org/wiki/Ladder_logic" target="_blank">ladder logic</a> programs and controls hardware</li>
+            <li>led multi-company, multi-team efforts to keep industrial customers happy</li>
+            <li>mitigated system-wide issues within an e-commerce company</li>
+            <li>designed industrial automation electronics</li>
+            <li>managed CE and UL hazardous locations compliance for an electronics manufacturer</li>
+            <li>been a small-scale production manager for electronics</li>
+            <li>worked on electronics for the Army that I'm not supposed to talk about :)</li>
+          </ul>
+          <h3>I am also a:</h3>
+          <ul>
+            <li>father & husband</li>
+            <li><a href="http://austin.backonmyfeet.org/" title="link to back on my feet">Back on My Feet</a> volunteer runner</li>
+            <li>cyclist</li>
+            <li>gardener</li>
+            <li>yogi</li>
+            <li>veteran</li>
+          </ul>
+        </div>
+      </div>
+      <!-- END ABOUT -->
+
+      <!-- CONTACT -->
+      <!-- extra margin on this div allows it to scroll to the top of page -->
+      <div id="contact" class="container class anchor_target" style="margin-bottom:800px">
+        <div class="jumbotron">
+          <h2>Contact</h2>
+          <p>Shoot Jason an email: <a href="mailto:jasonhorine@icloud.com? subject=Love your portfolio!" "email Jason"><img style="height: 27px;" src="images/email.png" alt="letter"><span>JasonHorine@iCloud.com</span></a></p>
+          <p>Connect on <a href="https://www.linkedin.com/in/jhorine" target="_blank"><img style="height: 27px; padding-bottom: 4px;" src="images/Logo-Black-34px-TM.png" alt="linked in"></a></p>
+          <h3 class="text-center">Cheers!</h3>
+        </div>
+        <br>
+        <p></p>
+      </div>
+      <!-- END CONTACT -->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <!-- Bootstrap JS CDN -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <!-- smooth scrolling -->
+    <script src="js/smooth_scroll.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
   </body>
 </html>

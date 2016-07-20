@@ -1,0 +1,12 @@
+body {
+  min-height: 2000px;
+  padding-top: 70px;
+}
+
+/* code below corrects Bootstrap issue with navbar covering anchor target */
+
+.anchor_target{
+  position: relative;
+  margin-top: -55px;
+  padding-top: 55px;
+}
