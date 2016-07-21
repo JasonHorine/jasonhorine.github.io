@@ -1,12 +1,21 @@
 body {
   min-height: 2000px;
-  padding-top: 70px;
+  padding-top: 41px;
 }
 
-/* code below corrects Bootstrap issue with navbar covering anchor target */
+/* following corrects Bootstrap issue with navbar covering anchor target */
 
-.anchor_target{
+div.target-offset-patch{
+  height: 52px;
+  width: 10px;
+  margin-top: -42px;
+  background-color: red;
+  opacity: 0.0;
+}
+
+/*.anchor_target{
   position: relative;
   margin-top: -55px;
   padding-top: 55px;
 }
+*/

@@ -5,6 +5,7 @@
 body {
   padding-bottom: 40px;
   color: #5a5a5a;
+  background-color: #888;
   position: relative;
 }
 
@@ -93,7 +94,6 @@ body {
   letter-spacing: -1px;
 }
 
-
 /* RESPONSIVE CSS
 -------------------------------------------------- */
 
@@ -130,6 +130,6 @@ body {
 
 @media (min-width: 992px) {
   .featurette-heading {
-    margin-top: 20px; /* was 120px */
+    margin-top: 20px;
   }
 }

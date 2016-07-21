@@ -20,7 +20,8 @@
 
     <!-- Custom styles -->
     <link href="css/navbar-fixed-top.css" rel="stylesheet">
-    <link  href="css/carousel.css" rel="stylesheet">
+    <link href="css/carousel.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -76,35 +77,34 @@
       </div>
     </nav>
 
-    <div id="home" class="container anchor_target">
-      <div class="jumbotron">
+    <div class="container">
+      <div id="home" class="target-offset-patch">
+      </div>
+      <div class="jumbotron text-center">
         <h1>Jason Horine</h1>
-        <div class="row">
-          <div class="col-sm-8 col-lg-9">
-            <p></p>
-            <p>problem solver | engineer | web developer</p>
-            <p>interaction designer | customer-advocate</p>
-          </div>
-          <img class="col-sm-4 col-lg-3 pull-right" src="images/JasonMugTp3.png" alt="cartoon image" width="256" height="256">
-        </div>
+        <p></p>
+        <p>problem solver | engineer | web developer</p>
+        <p>interaction designer | customer-advocate</p>
       </div> <!-- /jumbotron -->
-    </div> <!-- /container -->
+    <!-- </div> /container -->
+
+      <div id="dev" class="target-offset-patch">
+      </div>
 
     <!-- Featurettes
     ================================================== -->
     <!-- Wrap the rest of the page in another container to center all the content. -->
 
-    <div class="container">
-      <div class="container dev-container">
-        <h1 id="dev" class="anchor_target featurette-heading"><strong>Development</strong></h1>
-        <br>
+    <!-- <div class="container"> -->
+      <div class="dev-container bucket">
+        <h1 class="featurette-heading"><strong>Development</strong></h1>
 
         <!-- Dev examples snippets-->
         <div class="row">
 
           <div class="col-md-4 col-sm-6">
             <h2>CloudLogr: <br><span class="text-muted">full-stack Node.js</span></h2>
-            <p>SPA front end via AJAX with a MongoDB database.  The server will continue to log data even if the browser disconnects.</p>
+            <p>This site has an SPA front end via AJAX with a MongoDB database.  The server will continue to log data even if the browser disconnects.</p>
             <img class="img-responsive" src="images/cl_screen_shot.jpg" alt="image of Cloud Logger">
             <p></p>
             <!-- <p><a class="btn btn-info on_page_link" href="#featurette_cloudlogr" role="button">More Info &raquo;</a></p> -->
@@ -112,9 +112,9 @@
             <p><a class="btn btn-primary on_page_link" href="https://github.com/JasonHorine/cloudlogr" target="_blank" role="button">GitHub Repo &raquo;</a></p>
           </div>
 
-          <hr class="visible-xs">
 
           <div class="col-md-4 col-sm-6">
+            <hr class="visible-xs">
             <h2>Good Whiskers: <br><span class="text-muted">full-stack Rails</span></h2>
             <p>This product review site was a group project with CRUD routes and secure user-authentication.</p>
             <img class="img-responsive" src="images/gw_screen_shot.jpg" alt="beard oil image">
@@ -126,9 +126,8 @@
 
           <div class="clearfix visible-sm"></div>
 
-          <hr class="visible-xs">
-
           <div class="col-md-4 col-sm-6">
+            <hr class="visible-xs visible-sm">
             <h2>Tic-Tac-Toe: <br><span class="text-muted">HTML, CSS and jQuery</span></h2>
             <p>This started as a weekend jQuery homework assignment that I've kept adding things to.  It is designed for kids to use on mobile devices.</p>
             <img class="img-responsive" src="images/ttt_screen_shot.png" alt="Tic Tac Toe image">
@@ -216,26 +215,26 @@
           <div class="col-md-5">
             <img class="featurette-image img-responsive center-block" src="./images/gw_screen_shot.jpg" alt="good whiskers image">
           </div>
-        </div>
-      </div> -->
+        </div> -->
+      </div> <!-- /dev-container -->
 
-      <!-- END THE DEV FEATURETTES -->
-      <!-- START THE UX FEATURETTES -->
-      <!-- UX Examples -->
+      <!-- end Dev -->
+      <div id="ux" class="target-offset-patch">
+      </div>
+      <!-- start UX -->
 
-      <div class="container ux-container">
-        <h1 id="ux" class="anchor_target featurette-heading"><strong>UX</strong></h1>
-        <br>
+      <div class="bucket ux-container">
+        <h1  class="featurette-heading"><strong>UX</strong></h1>
         <div class="row featurette">
           <div class="col-md-5">
             <h2 class="featurette-heading">Industrial Controller Configuration Dashboard<span class="text-muted"></span></h2>
-            <p class="lead">Do-more! is a powerhouse for hardware in its price range.  However, the power of this platform only becomes apparent to those willing to get past the learning curve.  I took on this project after repeatedly hearing the same types of complaints from customers and Tech Support.  The video explains my process for this complicated project.</p>
+            <p class="lead">The <a href="http://www.automationdirect.com/do-more/index" target="_blank" title="Do-more marketing page">Do-more!</a> PLC is a powerhouse, even compared to much more expensive products.  However, the power of this platform only becomes apparent to those willing to get past the steep learning curve.  I took on this project after repeatedly hearing the same types of complaints from customers and Tech Support.  The video explains my process.</p>
             </div>
           <div class="col-md-7">
             <video class="featurette-image img-responsive center-block" src="./media/SysConWireNC.mp4" autobuffer autoloop loop controls poster="./images/SysConWireNC.jpg"></video>
           </div>
         </div>
-        <hr>
+        <hr class="visible-xs visible-sm">
         <div class="row featurette">
           <div class="col-md-5 col-md-push-7">
             <h2 class="featurette-heading">IDE Find / Replace<span class="text-muted"></span></h2>
@@ -245,15 +244,17 @@
             <img class="featurette-image img-responsive center-block" src="images/P3Find.png" alt="PLC search result image">
           </div>
         </div>
-        <hr>
       </div> <!-- end ux-container -->
       <!-- /END THE UX FEATURETTES -->
 
+      <div id="about" class="target-offset-patch">
+      </div>
+
       <!-- ABOUT -->
-      <div id="about" class="container anchor_target">
+      <div class="about-container">
         <div class="jumbotron">
-          <h2>About</h2>
-          <p>I trained for full-stack development and love interaction design, so staying near the front end of the stack is more interesting to me.  However, the database end tends to feel more straight-forward when I build things.  I am willing to do either or both, as long as I continue to learn, learn, learn.  I keep my <a href="https://www.linkedin.com/in/jhorine" target="_blank"><img style="height: 27px; padding-bottom: 4px;" src="images/Logo-Black-34px-TM.png" alt="linked in"></a> profile up-to-date, so please check there for more resume-like information on me.</p>
+          <h1 class="featurette-heading"><strong>About</strong></h1>
+          <p>I trained for full-stack development and love interaction design, so staying near the front end of the stack is more interesting to me.  I do enjoy the database side too.  I am willing to do either or both, as long as I continue to learn, learn, learn.  I keep my <a href="https://www.linkedin.com/in/jhorine" target="_blank"><img style="height: 27px; padding-bottom: 4px;" src="images/Logo-Black-34px-TM.png" alt="linked in"></a> profile up-to-date, so please check there for more resume-like information on me.</p>
           <h3>Aside from web development and UX, I have also:</h3>
           <ul>
             <li>debugged many customers' <a href="https://en.wikipedia.org/wiki/Ladder_logic" target="_blank">ladder logic</a> programs and controls hardware</li>
@@ -277,17 +278,17 @@
       </div>
       <!-- END ABOUT -->
 
+      <div id="contact" class="target-offset-patch">
+      </div>
+
       <!-- CONTACT -->
-      <!-- extra margin on this div allows it to scroll to the top of page -->
-      <div id="contact" class="container class anchor_target" style="margin-bottom:800px">
+      <!-- extra margin-bottom on this div allows it to scroll to the top of page -->
+      <div class="contact-container" style="margin-bottom:833px">
         <div class="jumbotron">
-          <h2>Contact</h2>
-          <p>Shoot Jason an email: <a href="mailto:jasonhorine@icloud.com? subject=Love your portfolio!" "email Jason"><img style="height: 27px;" src="images/email.png" alt="letter"><span>JasonHorine@iCloud.com</span></a></p>
+          <h1 class="featurette-heading"><strong>Contact</strong></h1>
+          <p><a href="mailto:jasonhorine@icloud.com? subject=Love your portfolio!" "email Jason"><img style="height: 27px;" src="images/email.png" alt="letter"><span>JasonHorine@iCloud.com</span></a></p>
           <p>Connect on <a href="https://www.linkedin.com/in/jhorine" target="_blank"><img style="height: 27px; padding-bottom: 4px;" src="images/Logo-Black-34px-TM.png" alt="linked in"></a></p>
-          <h3 class="text-center">Cheers!</h3>
         </div>
-        <br>
-        <p></p>
       </div>
       <!-- END CONTACT -->
 
