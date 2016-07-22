@@ -4,10 +4,6 @@ hr{
 
 body {
   font-size: 16px;
-  background-image: url("../images/snow_crop.jpg");
-  background-repeat: no-repeat;
-  background-size: 1705px;
-  background-position: center 0px;
 }
 
 div.dev-container{
@@ -29,11 +25,12 @@ div.bucket {
 }
 
 div.jumbotron.text-center{
-  background-color: rgba(0, 0, 0, 0.0);
-  box-shadow: 0px 0px 0px lightgray;
-  padding-top: 150px;
-  padding-bottom: 110px;
-  height: 451px;
+    background-image: url("../images/blue_bonnet_sunset_oil_sm.jpg");
+    overflow: visible;
+    background-position: center;
+    background-size: cover;
+    color: white;
+    text-shadow: 1px 1px 3px navy;
 }
 
 @media (min-width: 768px) {
