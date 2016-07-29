@@ -4,19 +4,17 @@ hr{
 
 body {
   font-size: 16px;
-  background-image: url("../images/snow_crop.jpg");
+  background-image: url("../images/cloud_3d_lg.jpg");
   background-repeat: no-repeat;
-  background-size: 1705px;
-  background-position: center 0px;
+  background-size: 753px;
+  background-position: center 265px;
+  background-attachment: fixed;
 }
 
 div.bucket {
   padding: 30px 15px;
-  background-color: #fafbfb;
+  background-color: rgba(250, 251, 251, 0.9);
   border-radius: 6px;
-  /*border: #f4f9f9;
-  border-width: 1px;
-  border-style: outset;*/
   box-shadow: 2px 2px 5px lightgray;
 }
 
@@ -28,13 +26,17 @@ div.bucket {
 div.jumbotron.text-center{
   background-color: rgba(0, 0, 0, 0.0);
   box-shadow: 0px 0px 0px lightgray;
-  padding-top: 150px;
+  padding-top: 0px;
   padding-bottom: 110px;
-  height: 451px;
+  height: 541px;
 }
 
 @media (min-width: 768px) {
   /* bucket styling to match Bootstrap CDN for Jumbotron */
   div.bucket {
     padding: 48px 60px;
+  }
+  body {
+    background-position: center 215px;
+    background-size: 100%;
   }
