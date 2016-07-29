@@ -10,22 +10,19 @@ body {
   background-position: center 0px;
 }
 
-div.dev-container{
-  background-color: white;
-  box-shadow: 1px 1px 5px lightgray;
-}
-div.ux-container{
-  background-color: white;
-  box-shadow: 1px 1px 5px lightgray;
-}
 div.bucket {
   padding: 30px 15px;
+  background-color: #fafbfb;
   border-radius: 6px;
+  /*border: #f4f9f9;
+  border-width: 1px;
+  border-style: outset;*/
+  box-shadow: 2px 2px 5px lightgray;
 }
 
 .jumbotron{
   margin-bottom: 0px;
-  box-shadow: 1px 1px 5px lightgray;
+  box-shadow: 2px 2px 5px lightgray;
 }
 
 div.jumbotron.text-center{
