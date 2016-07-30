@@ -29,3 +29,11 @@ $(document).ready(function(){
     };
   });
 })
+
+// collapse the dropdown nav, mobile widths
+//https://github.com/twbs/bootstrap/issues/12852
+$(document).on('click','.navbar-collapse.in',function(e) {
+    if( $(e.target).is('a') ) {
+        $(this).collapse('hide');
+    }
+});
