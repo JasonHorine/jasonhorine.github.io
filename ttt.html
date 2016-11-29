@@ -17,8 +17,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
     <link rel="stylesheet" type="text/css" href="css/style_ttt.css">
-    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
-    <script src="js/script.js"></script>
     <link rel="icon" href="./images/TicTacToe60px.jpg">
   </head>
 
@@ -81,7 +79,7 @@
         <footer>
           <div id="player1Pointer" class="turnPointer"></div>
           <div id="pointerDiv" class="turnPointer">Your Turn!</div> <!-- in JS too -->
-          <div id="player2Pointer" class="turnPointer"></div>
+          <div style="display: none" id="player2Pointer" class="turnPointer"></div>
         </footer>
       </div>
       <audio id="click" preload="auto">
@@ -100,5 +98,5 @@
         <source src="./media/aww.wav">
       </audio>
   </body>
-
+  <script src="js/script.js"></script>
 </html>

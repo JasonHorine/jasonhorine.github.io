@@ -1,47 +1,21 @@
 
-// document ready:
-$(function(){
-  // pop-up
-  customAlert("Game on!", 1000);
-  // ring bell
-  audioBell();
-  // player 1 goes first on page refresh, set it
-  pointerControl(1);
-  // if a cell is clicked:  (how to make DRY?)
-  $('#cell0').click(function(){
-    clickCell(0);
-  });
-  $('#cell1').click(function(){
-    clickCell(1);
-  });
-  $('#cell2').click(function(){
-    clickCell(2);
-  });
-  $('#cell3').click(function(){
-    clickCell(3);
-  });
-  $('#cell4').click(function(){
-    clickCell(4);
-  });
-  $('#cell5').click(function(){
-    clickCell(5);
-  });
-  $('#cell6').click(function(){
-    clickCell(6);
-  });
-  $('#cell7').click(function(){
-    clickCell(7);
-  });
-  $('#cell8').click(function(){
-    clickCell(8);
-  });
-  //if reset is clicked:
-  $('#reset-btn').click(function(){
-    resetBoard();
-  });
-});
+// pop-up
+customAlert("Game on!", 1000);
+// ring bell for start
+audioBell();
+//loop through IDs 'cell0'-'cell8' and assign clickCell() to .onclick
+for (let i = 0; i < 9; i++){
+  document.getElementById("cell" + i).onclick=(function(){
+    clickCell(i);
+  })
+}
+//if reset is clicked:
+document.getElementById("reset-btn").onclick = function(){
+  resetBoard();
+}
 
-
+// player 1 goes first on page refresh, set it
+pointerControl(1);
 // initialize the variables for the cells
 var cellStatus = [null, null, null, null, null, null, null, null, null]; // tracks the status of the board
 // var p1Score = 0;
@@ -58,20 +32,20 @@ function resetBoard(){
   audioBell(); // ring bell
   //reset the game board array var for a new game
   cellStatus = [null, null, null, null, null, null, null, null, null];
-  // update the DOM
-  for (i = 0; i < 9; i++){ // iterate through all cells of the board.
-    $('#cell' + i).html('<p></p>');
+  // clear out the game board divs
+  for (i = 0; i < 9; i++){
+    document.getElementById("cell" + i).innerHTML = null;
   }
-  // toggle who starts first
+  // toggle who starts
   goesFirst = !goesFirst;
-  // set current player to start the game
+  // set current player based on goesFirst
   goesFirst ? currentPlayer = 2 : currentPlayer = 1;
+  // restore pointer text after round win
+  document.getElementById("pointerDiv").innerHTML = 'Your Turn!'
   // set current pointer
   pointerControl(currentPlayer);
   // reset the roundDone Boolean
   roundDone = false;
-  // change whose turn it is
-  // changePlayer();
 }
 
 function clickCell(cellNum){
@@ -82,22 +56,25 @@ function clickCell(cellNum){
       audioClick(); // play the click sound
       setCell(cellNum, currentPlayer);  // set the cell var to the current player
       if (currentPlayer == 1) {
-       $('#cell' + cellNum).html('<img src="./images/x_red.png" class="red">'); // update the DOM
+       document.getElementById("cell" + cellNum).innerHTML = '<img src="./images/x_red.png" class="red">'; // update the DOM
       }
       if (currentPlayer == 2) {
-        $('#cell' + cellNum).html('<img src="./images/o_red.png" class="black">'); // update the DOM
+        document.getElementById("cell" + cellNum).innerHTML = '<img src="./images/o_red.png" class="black">'; // update the DOM
       }
       // see if the round is over
       switch (getRoundWinner()){ // getRoundWinner() checks for a complete round
         case 1: // player 1 has won
           celebrate(1);
+          winPointer();
           break;
         case 2: // player 2 has won
-          celebrate(2)
+          celebrate(2);
+          winPointer();
           break;
         case 3: // draw
           audioAww();
           customAlert("Tie", 1500);
+          pointerControl(0);
           break;
         default: // keep playing
           changePlayer();  // now it's the other player's turn
@@ -113,22 +90,22 @@ function clickCell(cellNum){
 //      Sounds
 //////////////////////////////////////////////////////
 function audioAww() {
-  $("#aww")[0].play(); // audio from HTML <audio>
+  document.getElementById("aww").play();
 }
 
 function audioBell() {
-  $("#bell")[0].play(); // audio from HTML <audio>
+  document.getElementById("bell").play();
 }
 function audioBuzz() {
-  $("#buzz")[0].play(); // audio from HTML <audio>
+  document.getElementById("buzz").play();
 }
 
 function audioCheer() {
-  $("#cheer")[0].play(); // audio from HTML <audio>
+  document.getElementById("cheer").play();
 }
 
 function audioClick() {
-  $("#click")[0].play(); // audio from HTML <audio>
+  document.getElementById("click").play();
 }
 
 // mark a cell as occupied
@@ -199,19 +176,19 @@ function changePlayer(){
 function pointerControl(player){
   switch (player){
     case 0: // hide all
-      $('#player1Pointer').hide(); // hide left pointer
-      $('#player2Pointer').hide(); // show right pointer
-      $('#pointerDiv').hide(); // show the text div
+      document.getElementById("player1Pointer").style.display = 'none'; //hide
+      document.getElementById("pointerDiv").style.display = 'none'; //hide
+      document.getElementById("player2Pointer").style.display = 'none'; //hide
       break;
     case 1: // for player 1, left
-      $('#player1Pointer').show(); // hide left pointer
-      $('#player2Pointer').hide(); // show right pointer
-      $('#pointerDiv').show(); // show the text div
+      document.getElementById("player1Pointer").style.display = 'flex'; //show left pointer
+      document.getElementById("pointerDiv").style.display = 'flex'; //show the middle
+      document.getElementById("player2Pointer").style.display = 'none'; //hide right pointer
       break;
     case 2: // for player 2, right
-      $('#player1Pointer').hide(); // hide left pointer
-      $('#player2Pointer').show(); // show right pointer
-      $('#pointerDiv').show(); // show the text div
+      document.getElementById("player1Pointer").style.display = 'none'; //hide left pointer
+      document.getElementById("pointerDiv").style.display = 'flex'; //show the middle
+      document.getElementById("player2Pointer").style.display = 'flex'; //show right pointer
       break;
     default:
       break; // no action
@@ -220,16 +197,25 @@ function pointerControl(player){
 
 // alter the pointer to celebrate a win
 function winPointer(){
-  var originalText = $('#pointerDiv').html; // store the pointerDiv text
-  $('#pointerDiv').html('<div id="pointerDiv" class="turnPointer">Winner!</div>');
-  var intervalID = setInterval(function(){ // start flashing and preserve ID
-
-  })
-  setTimeout(function(){ // delay to stop flashing
-    clearInterval(intervalID); // use the ID to stop flashing
-  }, 2000); // 2s delay
-  $('#pointerDiv').html(originalText); // return to original text
-}
+  var pointText = document.getElementById("pointerDiv").innerHTML;
+  pointerControl(0); // hide the pointer
+  document.getElementById("pointerDiv").innerHTML = 'Winner!'; // new pointer text
+  var flashPer = 500;
+  var flashDur = 2000;
+  var intId = setInterval(function(){
+    pointerControl(currentPlayer);
+    setTimeout(function(){
+      pointerControl(0);
+    },flashPer/2);
+  }, flashPer);
+  // when this fires, it stops the setInterval above
+  setTimeout(function(){
+    clearInterval(intId);
+    setTimeout(function(){
+      pointerControl(currentPlayer); // show the pointer as flashing stops
+    },flashPer/2);
+    },flashDur);
+};
 
 function celebrate(playerNumber){
   // if a winner was found, acknowledge the player
@@ -237,10 +223,12 @@ function celebrate(playerNumber){
   customAlert("Player " + playerNumber + " wins!!!", 2000); // show pop up for 2s
 }
 
+// pass in a string to display in the pop up, and the duration to display
 function customAlert(msg,duration){
-  $('.pop-up').html(msg); // change the text in the pop-up div
-  $('.pop-up').show(); // make the pop-up visible
+  var popUp = document.getElementsByClassName("pop-up")[0];
+  popUp.innerHTML = msg; // change the popUp text
+  popUp.style.display = "flex"; // show the popUp
   setTimeout(function(){ // hide the pop-up after duration has passed
-    $('.pop-up').hide();
+    popUp.style.display = 'none';
   },duration);
 }
