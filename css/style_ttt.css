@@ -104,6 +104,7 @@ img {
   font-size: 26px;
   letter-spacing: 1.5px;
   text-align: center;
+  border-radius: 15px;
 }
 
 .turnPointer {
